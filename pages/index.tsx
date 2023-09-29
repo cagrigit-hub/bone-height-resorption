@@ -42,7 +42,7 @@ export default function Home() {
         onSubmit={calculate}
         className="flex shadow-xl flex-col space-y-3 md:space-y-4 mt-8 md:mt-12 bg-[#00916E] text-[#eae1da] px-20  md:px-24 py-6 md:py-12 rounded-lg ">
         <div>
-          <h1 className="font-bold">Enter the 'α' constant: </h1>
+          <h1 className="font-bold">Enter the &apos;α&apos; constant: </h1>
           <input
             required
             type="text"
@@ -51,7 +51,7 @@ export default function Home() {
           />
         </div>
         <div>
-          <h1 className="font-bold">Enter the 't1/2' constant: </h1>
+          <h1 className="font-bold">Enter the &apos;t1/2&apos; constant: </h1>
           <input
             required
             type="text"

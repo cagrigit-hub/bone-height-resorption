@@ -19,15 +19,14 @@ export default function Home() {
 
     const result = (alpha * time) / (time + tHalf);
     const bhRemaining = (1 - result) * initial;
-    console.log(result);
-    setResult(result);
-    setBHRemaining(bhRemaining);
+    setResult(parseFloat(result.toFixed(4)));
+    setBHRemaining(parseFloat(bhRemaining.toFixed(4)));
     setPopup(true);
   }
   return (
     <main
       className={
-        "flex items-center justify-center flex-col    " + roboto.className
+        "flex mb-12 items-center justify-center flex-col    " + roboto.className
       }>
       <div
         className={
@@ -36,7 +35,10 @@ export default function Home() {
         <h1 className="text-xl md:text-2xl font-bold">
           Bone Height Resorpiton Calculator
         </h1>
-        <h2 className="text-lg md:text-xl ">Burak Ok</h2>
+        <div className="flex flex-col space-y-4">
+          <img className="w-32" src="/bsknt.png" alt="baskent-logo" />
+          <h2 className="text-lg md:text-xl font-bold">Burak Ok</h2>
+        </div>
       </div>
       <form
         onSubmit={calculate}
@@ -89,12 +91,14 @@ export default function Home() {
       {popup && (
         <div
           id="popup"
-          className="fixed space-y-4 flex items-center justify-center flex-col font-bold bg-gray-200 opacity-[0.8] h-[120vh] w-screen">
+          className="text-center fixed space-y-4 flex items-center justify-center flex-col font-bold bg-gray-200 opacity-[0.8] h-[120vh] w-screen">
           <h1 className="text-xl md:text-2xl">RESULT: </h1>
           <h2 className="text-lg md:text-xl ">
             Bone height resorption: {result}
           </h2>
-          <h2>Bone height resorption percentage: {result * 100}%</h2>
+          <h2>
+            Bone height resorption percentage: {(result * 100).toFixed(2)}%
+          </h2>
           <h2 className="text-lg md:text-xl ">
             Bone height remaining: {bhRemaining}
           </h2>

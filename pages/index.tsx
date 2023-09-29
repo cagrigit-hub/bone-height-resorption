@@ -111,7 +111,7 @@ export default function Home() {
           </button>
         </div>
       )}
-      <h1>Cagri Kutay Ok - kut.ai</h1>
+      <h1 className="mt-4">Cagri Kutay Ok - kut.ai</h1>
     </main>
   );
 }
